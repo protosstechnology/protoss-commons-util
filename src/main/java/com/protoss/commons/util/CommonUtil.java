@@ -1,4 +1,4 @@
-package com.mpg.itcane.mail.util;
+package com.protoss.commons.util;
 
 import java.sql.Timestamp;
 import java.util.Calendar;
