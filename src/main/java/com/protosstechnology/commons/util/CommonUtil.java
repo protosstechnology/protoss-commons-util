@@ -1,4 +1,4 @@
-package com.protoss.commons.util;
+package com.protosstechnology.commons.util;
 
 import java.sql.Timestamp;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package com.protoss.commons.util;
+package com.protosstechnology.commons.util;
 
 public class BeansUtil {
 
