@@ -4,14 +4,12 @@ import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.springframework.http.HttpHeaders;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class CommonUtil {
+public class DateUtil {
 	
-	private CommonUtil() {
+	private DateUtil() {
 		super();
 	}
 
@@ -25,11 +23,4 @@ public class CommonUtil {
         }
         return today;
     }
-	
-	public static HttpHeaders getHeaderJson() {
-		HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return headers;
-	}
-
 }
