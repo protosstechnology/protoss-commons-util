@@ -7,13 +7,13 @@
   <!-- P R O J E C T  D E S C R I P T I O N                                   -->
   <!-- ====================================================================== -->
 
-  <groupId>com.protoss</groupId>
+  <groupId>com.protosstechnology</groupId>
   <artifactId>commons-util</artifactId>
   <name>Protoss Common Util</name>
   <version>1.0-alpha2-SNAPSHOT</version>
 
   <description>Protoss Common Util is a pure-Java common library.</description>
-  <url>https://commons.apache.org/proper/commons-imaging/</url>
+  <url>https://github.com/protosstechnology/protoss-commons-util/</url>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
