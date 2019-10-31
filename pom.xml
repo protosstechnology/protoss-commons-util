@@ -153,9 +153,6 @@
   				<autoReleaseAfterClose>false</autoReleaseAfterClose> 
   			</configuration>
   		</plugin>
-  		
-  		
-  		
   	</plugins>
   </build>
 

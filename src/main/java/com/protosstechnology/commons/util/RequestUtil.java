@@ -3,6 +3,7 @@ package com.protosstechnology.commons.util;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,9 +15,9 @@ public class RequestUtil {
 
 	public static Map<String,String> getMapParam(Map<String,String[]> parameterMap){
 		Map<String,String> mapContext = new HashMap();
-		for(Object key:parameterMap.entrySet()){
-			String value = parameterMap.get(key)[0];
-			mapContext.put(String.valueOf(key), value);
+		for(Entry key:parameterMap.entrySet()){
+			String value = parameterMap.get(key.getKey())[0];
+			mapContext.put(String.valueOf(key.getKey()), value);
 		}
 		return mapContext;
 	}
