@@ -7,6 +7,9 @@ import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+
 public class RequestUtil {
 	
 	private RequestUtil() {
@@ -35,6 +38,23 @@ public class RequestUtil {
 		}
 		
 	}
+	
+	public static MultiValueMap<String, String> getMultiValueMap(Map<String, String> parameterMap){
+		MultiValueMap<String, String> body = new LinkedMultiValueMap();
+	    if (parameterMap != null) {
+	        for (Entry<String, String> key : parameterMap.entrySet()) {
+	            if (!"parentId".equals(key.getKey()) && !"_csrf".equals(key.getKey())) {
+	                body.add(key.getKey(), parameterMap.get(key.getKey()));
+	
+	            }
+	        }
+	    }
+		return body;
+	}
+	
+	
+	
+	
 	
 	public static String getValueString(String value1,String value2){
 		if(value1 !=null){
