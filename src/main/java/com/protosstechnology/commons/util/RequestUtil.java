@@ -39,6 +39,18 @@ public class RequestUtil {
 		
 	}
 	
+	public  String[] getAuthenticationData(HttpServletRequest request){
+ 		if(request.getHeader("authorization") !=null){
+ 			String userToken = request.getHeader("authorization").replaceAll("Basic ", "");
+ 			byte[] decodedBytes = Base64.getDecoder().decode(userToken);
+ 			String decodedString = new String(decodedBytes);
+ 			return decodedString.split(":");
+ 		}else {
+ 			return null;
+ 		}
+ 		
+ 	}
+	
 	public static MultiValueMap<String, String> getMultiValueMap(Map<String, String> parameterMap){
 		MultiValueMap<String, String> body = new LinkedMultiValueMap();
 	    if (parameterMap != null) {
